@@ -47,6 +47,7 @@ class Api::V1::StatusesController < Api::BaseController
     @status = PostStatusService.new.call(current_user.account,
                                          text: status_params[:status],
                                          thread: status_params[:in_reply_to_id].blank? ? nil : Status.find(status_params[:in_reply_to_id]),
+                                         reblog_of_id: status_params[:reblog_of_id].blank? ? nil : Status.find(status_params[:reblog_of_id]),
                                          media_ids: status_params[:media_ids],
                                          sensitive: status_params[:sensitive],
                                          spoiler_text: status_params[:spoiler_text],
@@ -82,6 +83,7 @@ class Api::V1::StatusesController < Api::BaseController
     params.permit(
       :status,
       :in_reply_to_id,
+      :reblog_of_id,
       :sensitive,
       :spoiler_text,
       :visibility,
