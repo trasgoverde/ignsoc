@@ -80,12 +80,19 @@ export default class DetailedStatus extends ImmutablePureComponent {
   }
 
   render () {
-    const status = (this.props.status && this.props.status.get('reblog')) ? this.props.status.get('reblog') : this.props.status;
     const outerStyle = { boxSizing: 'border-box' };
     const { compact } = this.props;
 
+    let { status } = this.props;
+    let reblogContent;
+
     if (!status) {
       return null;
+    }
+
+    if (status.get('reblog', null) !== null && typeof status.get('reblog') === 'object') {
+      reblogContent = status.get('contentHtml')
+      status = status.get('reblog');
     }
 
     let media           = '';
@@ -196,7 +203,12 @@ export default class DetailedStatus extends ImmutablePureComponent {
             <DisplayName account={status.get('account')} localDomain={this.props.domain} />
           </NavLink>
 
-          <StatusContent status={status} expanded={!status.get('hidden')} onExpandedToggle={this.handleExpandedToggle} />
+          <StatusContent
+            status={status}
+            reblogContent={reblogContent}
+            expanded={!status.get('hidden')}
+            onExpandedToggle={this.handleExpandedToggle}
+          />
 
           {media}
 
