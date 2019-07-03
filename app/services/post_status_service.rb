@@ -20,12 +20,14 @@ class PostStatusService < BaseService
   # @option [Doorkeeper::Application] :application
   # @option [String] :idempotency Optional idempotency key
   # @option [String] :group Optional group id
+  # @option [Status] :reblog_of_id Optional status to reblog_of_id
   # @return [Status]
   def call(account, options = {})
     @account     = account
     @options     = options
     @text        = @options[:text] || ''
     @in_reply_to = @options[:thread]
+    @reblog_of_id = @options[:reblog_of_id]
 
     return idempotency_duplicate if idempotency_given? && idempotency_duplicate?
 
@@ -166,6 +168,7 @@ class PostStatusService < BaseService
       group_id: @options[:group_id],
       media_attachments: @media || [],
       thread: @in_reply_to,
+      reblog: @reblog_of_id,
       poll_attributes: poll_attributes,
       sensitive: (@options[:sensitive].nil? ? @account.user&.setting_default_sensitive : @options[:sensitive]) || @options[:spoiler_text].present?,
       spoiler_text: @options[:spoiler_text] || '',
@@ -192,6 +195,7 @@ class PostStatusService < BaseService
   def scheduled_options
     @options.tap do |options_hash|
       options_hash[:in_reply_to_id] = options_hash.delete(:thread)&.id
+      options_hash[:reblog] = options_hash.delete(:reblog_of_id)&.id
       options_hash[:application_id] = options_hash.delete(:application)&.id
       options_hash[:scheduled_at]   = nil
       options_hash[:idempotency]    = nil
