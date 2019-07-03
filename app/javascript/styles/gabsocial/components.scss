@@ -2483,6 +2483,8 @@ a.status-card.compact:hover {
 .column-header {
 	display: flex;
 	font-size: 16px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 
 	background: $gab-background-container;
 	body.theme-gabsocial-light & {
