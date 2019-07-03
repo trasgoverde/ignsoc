@@ -78,6 +78,14 @@
 			opacity: 1.0;
 		}
 	}
+
+	.autosuggest-textarea {
+		background: $simple-background-color;
+		border-radius: 5px 5px 0 0;
+		padding-bottom: 5px;
+		box-sizing: border-box;
+	}
+
 	.autosuggest-textarea__textarea,
 	.spoiler-input__input {
 		display: block;
@@ -170,7 +178,6 @@
 		.compose-form__uploads-wrapper {
 			display: flex;
 			flex-direction: row;
-			padding: 5px;
 			flex-wrap: wrap;
 		}
 		.compose-form__upload {
