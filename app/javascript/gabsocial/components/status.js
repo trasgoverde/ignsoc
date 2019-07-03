@@ -301,24 +301,26 @@ class Status extends ImmutablePureComponent {
     } else if (status.get('reblog', null) !== null && typeof status.get('reblog') === 'object') {
       const display_name_html = { __html: status.getIn(['account', 'display_name_html']) };
 
-      prepend = (
-        <div className='status__prepend'>
-          <div className='status__prepend-icon-wrapper'><Icon id='retweet' className='status__prepend-icon' fixedWidth /></div>
-          <FormattedMessage id='status.reblogged_by' defaultMessage='{name} reposted' values={{
-            name: <NavLink to={`/${status.getIn(['account', 'acct'])}`} className='status__display-name muted'>
-                    <bdi>
-                      <strong dangerouslySetInnerHTML={display_name_html} />
-                    </bdi>
-                  </NavLink>
-          }} />
-        </div>
-      );
-
-      rebloggedByText = intl.formatMessage({ id: 'status.reblogged_by', defaultMessage: '{name} reposted' }, { name: status.getIn(['account', 'acct']) });
-
       account = status.get('account');
       reblogContent = status.get('contentHtml')
       status        = status.get('reblog');
+
+      //Show "reposted by" only if there's no quote post content
+      if (!reblogContent) {
+        rebloggedByText = intl.formatMessage({ id: 'status.reblogged_by', defaultMessage: '{name} reposted' }, { name: status.getIn(['account', 'acct']) });
+        prepend =  (
+          <div className='status__prepend'>
+            <div className='status__prepend-icon-wrapper'><Icon id='retweet' className='status__prepend-icon' fixedWidth /></div>
+            <FormattedMessage id='status.reblogged_by' defaultMessage='{name} reposted' values={{
+              name: <NavLink to={`/${status.getIn(['account', 'acct'])}`} className='status__display-name muted'>
+                      <bdi>
+                        <strong dangerouslySetInnerHTML={display_name_html} />
+                      </bdi>
+                    </NavLink>
+            }} />
+          </div>
+        );
+      }
     }
 
     if (status.get('poll')) {
