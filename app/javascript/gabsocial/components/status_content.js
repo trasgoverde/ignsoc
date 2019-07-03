@@ -6,6 +6,8 @@ import { FormattedMessage } from 'react-intl';
 import Permalink from './permalink';
 import classnames from 'classnames';
 import Icon from 'gabsocial/components/icon';
+import DisplayName from './display_name';
+import QuoteStatus from './quote_status';
 
 const MAX_HEIGHT = 642; // 20px * 32 (+ 2px padding at the top)
 
@@ -135,15 +137,15 @@ export default class StatusContent extends React.PureComponent {
     this.node = c;
   }
 
-  getHtmlContent = () => {
-    const { status, reblogContent } = this.props;
-
-    const properContent = status.get('contentHtml');
-    
-    return reblogContent
-      ? `${reblogContent} <div class='status__quote'>${properContent}</div>`
-      : properContent;
-  }
+  // getHtmlContent = () => {
+  //   const { status, reblogContent } = this.props;
+  //
+  //   const properContent = status.get('contentHtml');
+  //
+  //   return reblogContent
+  //     ? `${reblogContent} <div class='status__quote'>${properContent}</div>`
+  //     : properContent;
+  // }
 
   render () {
     const { status, reblogContent } = this.props;
@@ -154,7 +156,8 @@ export default class StatusContent extends React.PureComponent {
 
     const hidden = this.props.onExpandedToggle ? !this.props.expanded : this.state.hidden;
 
-    const content = { __html: this.getHtmlContent() };
+    const quoteContent = reblogContent ? (<QuoteStatus status={status} />) : null;
+    const content = reblogContent ? { __html: reblogContent } : { __html: status.get('contentHtml') };
     const spoilerContent = { __html: status.get('spoilerHtml') };
     const directionStyle = { direction: 'ltr' };
     const classNames = classnames('status__content', {
@@ -198,7 +201,17 @@ export default class StatusContent extends React.PureComponent {
 
           {mentionsPlaceholder}
 
-          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''}`} style={directionStyle} dangerouslySetInnerHTML={content} lang={status.get('language')} />
+          <div
+            tabIndex={!hidden ? 0 : null}
+            className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''}`}
+            style={directionStyle}
+          >
+            <div
+              dangerouslySetInnerHTML={content}
+              lang={status.get('language')}
+            />
+            {quoteContent}
+          </div>
         </div>
       );
     } else if (this.props.onClick) {
@@ -209,11 +222,15 @@ export default class StatusContent extends React.PureComponent {
           key='content'
           className={classNames}
           style={directionStyle}
-          dangerouslySetInnerHTML={content}
-          lang={status.get('language')}
           onMouseDown={this.handleMouseDown}
           onMouseUp={this.handleMouseUp}
-        />,
+        >
+          <div
+            dangerouslySetInnerHTML={content}
+            lang={status.get('language')}
+          />
+          {quoteContent}
+        </div>,
       ];
 
       if (this.state.collapsed) {
@@ -228,9 +245,13 @@ export default class StatusContent extends React.PureComponent {
           ref={this.setRef}
           className='status__content'
           style={directionStyle}
-          dangerouslySetInnerHTML={content}
-          lang={status.get('language')}
-        />
+        >
+          <div
+            dangerouslySetInnerHTML={content}
+            lang={status.get('language')}
+          />
+          {quoteContent}
+        </div>
       );
     }
   }
