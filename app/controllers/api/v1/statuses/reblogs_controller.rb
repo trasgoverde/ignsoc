@@ -30,7 +30,11 @@ class Api::V1::Statuses::ReblogsController < Api::BaseController
   end
 
   def status_for_destroy
-    current_user.account.statuses.where(reblog_of_id: params[:status_id]).first!
+    # : TODO : remove(?) when quote posting is all set up if using new key (quote_post_id) on status model
+    current_user.account.statuses.where(
+      reblog_of_id: params[:status_id],
+      text: '',
+    ).first!
   end
 
   def reblog_params
