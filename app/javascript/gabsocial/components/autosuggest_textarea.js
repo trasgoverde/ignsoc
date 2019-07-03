@@ -7,6 +7,7 @@ import { isRtl } from '../rtl';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import Textarea from 'react-textarea-autosize';
 import classNames from 'classnames';
+import QuoteIndicatorContainer from '../features/compose/containers/quote_indicator_container';
 
 const textAtCursorMatchesToken = (str, caretPosition) => {
   let word;
@@ -229,6 +230,8 @@ export default class AutosuggestTextarea extends ImmutablePureComponent {
               style={style}
               aria-autocomplete='list'
             />
+
+            <QuoteIndicatorContainer />
           </label>
         </div>
         {children}
