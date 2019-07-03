@@ -299,13 +299,15 @@
 }
 
 .reply-indicator {
-	border-radius: 4px;
 	margin-bottom: 10px;
-	background: $ui-primary-color;
-	padding: 10px;
+	padding: 0 10px 10px 10px;
 	min-height: 23px;
 	overflow-y: auto;
 	flex: 0 2 auto;
+
+	&--quote {
+		margin: 10px;
+	}
 }
 
 .reply-indicator__header {
@@ -480,6 +482,13 @@
 	border-bottom: 1px solid lighten($ui-base-color, 8%);
 }
 
+.status__wrapper--quote {
+	border: 1px solid lighten($ui-base-color, 8%);
+	border-radius: 10px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
 .status__prepend-icon-wrapper {
 	left: -26px;
 	position: absolute;
@@ -526,6 +535,11 @@
 
 	opacity: 1;
 	animation: fade 150ms linear;
+
+	&--quote {
+		padding-left: 10px !important;
+		border-bottom: none !important;
+	}
 
 	.video-player {
 		margin-top: 8px;
