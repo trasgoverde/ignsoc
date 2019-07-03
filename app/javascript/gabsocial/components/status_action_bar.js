@@ -36,6 +36,7 @@ const messages = defineMessages({
   admin_account: { id: 'status.admin_account', defaultMessage: 'Open moderation interface for @{name}' },
   admin_status: { id: 'status.admin_status', defaultMessage: 'Open this status in the moderation interface' },
   copy: { id: 'status.copy', defaultMessage: 'Copy link to status' },
+  quote: { id: 'status.quote', defaultMessage: 'Quote' },
 });
 
 class StatusActionBar extends ImmutablePureComponent {
@@ -89,6 +90,14 @@ class StatusActionBar extends ImmutablePureComponent {
   handleFavouriteClick = () => {
     if (me) {
       this.props.onFavourite(this.props.status);
+    } else {
+      this.props.onOpenUnauthorizedModal();
+    }
+  }
+
+  handleQuoteClick = () => {
+    if (me) {
+      this.props.onQuote(this.props.status, this.context.router.history);
     } else {
       this.props.onOpenUnauthorizedModal();
     }
@@ -229,13 +238,13 @@ class StatusActionBar extends ImmutablePureComponent {
 
     let menu = this._makeMenu(publicStatus);
     let reblogIcon = 'retweet';
+    let quoteIcon = 'quote-left';
     let replyIcon;
     let replyTitle;
 
-    if (status.get('visibility') === 'direct') {
-      reblogIcon = 'envelope';
-    } else if (status.get('visibility') === 'private') {
+    if (status.get('visibility') === 'private') {
       reblogIcon = 'lock';
+      quoteIcon = 'lock'
     }
 
     if (status.get('in_reply_to_id', null) === null) {
@@ -264,6 +273,7 @@ class StatusActionBar extends ImmutablePureComponent {
           <IconButton className='status__action-bar-button star-icon' animate active={status.get('favourited')} pressed={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='star' onClick={this.handleFavouriteClick} />
           {favoriteCount !== 0 && <Link to={`/${status.getIn(['account', 'acct'])}/posts/${status.get('id')}/favorites`} className='detailed-status__link'>{favoriteCount}</Link>}
         </div>
+        <IconButton className='status__action-bar-button' animate disabled={!publicStatus} title={intl.formatMessage(messages.quote)} icon={quoteIcon} onClick={this.handleQuoteClick} />
         {shareButton}
 
         <div className='status__action-bar-dropdown'>

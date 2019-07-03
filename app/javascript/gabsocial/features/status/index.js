@@ -21,6 +21,7 @@ import {
   replyCompose,
   mentionCompose,
   directCompose,
+  quoteCompose,
 } from '../../actions/compose';
 import { blockAccount } from '../../actions/accounts';
 import {
@@ -57,6 +58,8 @@ const messages = defineMessages({
   replyConfirm: { id: 'confirmations.reply.confirm', defaultMessage: 'Reply' },
   replyMessage: { id: 'confirmations.reply.message', defaultMessage: 'Replying now will overwrite the message you are currently composing. Are you sure you want to proceed?' },
   blockAndReport: { id: 'confirmations.block.block_and_report', defaultMessage: 'Block & Report' },
+  quoteConfirm: { id: 'confirmations.quote.confirm', defaultMessage: 'Quote' },
+  quoteMessage: { id: 'confirmations.quote.message', defaultMessage: 'Quoting now will overwrite the message you are currently composing. Are you sure you want to proceed?' },
 });
 
 const makeMapStateToProps = () => {
@@ -183,6 +186,19 @@ class Status extends ImmutablePureComponent {
       }));
     } else {
       dispatch(replyCompose(status, this.context.router.history));
+    }
+  }
+
+  handleQuoteClick = (status) => {
+    let { askReplyConfirmation, dispatch, intl } = this.props;
+    if (askReplyConfirmation) {
+      dispatch(openModal('CONFIRM', {
+        message: intl.formatMessage(messages.quoteMessage),
+        confirm: intl.formatMessage(messages.quoteConfirm),
+        onConfirm: () => dispatch(quoteCompose(status, this.context.router.history)),
+      }));
+    } else {
+      dispatch(quoteCompose(status, this.context.router.history));
     }
   }
 
@@ -486,6 +502,7 @@ class Status extends ImmutablePureComponent {
                 <ActionBar
                   status={status}
                   onReply={this.handleReplyClick}
+                  onQuote={this.handleQuoteClick}
                   onFavourite={this.handleFavouriteClick}
                   onReblog={this.handleReblogClick}
                   onDelete={this.handleDeleteClick}

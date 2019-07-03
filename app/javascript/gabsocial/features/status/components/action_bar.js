@@ -29,6 +29,7 @@ const messages = defineMessages({
   admin_account: { id: 'status.admin_account', defaultMessage: 'Open moderation interface for @{name}' },
   admin_status: { id: 'status.admin_status', defaultMessage: 'Open this status in the moderation interface' },
   copy: { id: 'status.copy', defaultMessage: 'Copy link to status' },
+  quote: { id: 'status.quote', defaultMessage: 'Quote' },
 });
 
 export default @injectIntl
@@ -43,6 +44,7 @@ class ActionBar extends React.PureComponent {
     onReply: PropTypes.func.isRequired,
     onReblog: PropTypes.func.isRequired,
     onFavourite: PropTypes.func.isRequired,
+    onQuote: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
     onDirect: PropTypes.func.isRequired,
     onMention: PropTypes.func.isRequired,
@@ -57,6 +59,10 @@ class ActionBar extends React.PureComponent {
 
   handleReplyClick = () => {
     this.props.onReply(this.props.status);
+  }
+
+  handleQuoteClick = () => {
+    this.props.onQuote(this.props.status);
   }
 
   handleReblogClick = (e) => {
@@ -187,8 +193,11 @@ class ActionBar extends React.PureComponent {
     }
 
     let reblogIcon = 'retweet';
-    if (status.get('visibility') === 'direct') reblogIcon = 'envelope';
-    else if (status.get('visibility') === 'private') reblogIcon = 'lock';
+    let quoteIcon = 'quote-left';
+    if (status.get('visibility') === 'private') {
+      reblogIcon = 'lock';
+      quoteIcon = 'lock';
+    }
 
     let reblog_disabled = (status.get('visibility') === 'direct' || status.get('visibility') === 'private');
 
@@ -197,6 +206,7 @@ class ActionBar extends React.PureComponent {
         <div className='detailed-status__button'><IconButton title={intl.formatMessage(messages.reply)} icon={status.get('in_reply_to_account_id') === status.getIn(['account', 'id']) ? 'reply' : replyIcon} onClick={this.handleReplyClick} /></div>
         <div className='detailed-status__button'><IconButton disabled={reblog_disabled} active={status.get('reblogged')} title={reblog_disabled ? intl.formatMessage(messages.cannot_reblog) : intl.formatMessage(messages.reblog)} icon={reblogIcon} onClick={this.handleReblogClick} /></div>
         <div className='detailed-status__button'><IconButton className='star-icon' animate active={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='star' onClick={this.handleFavouriteClick} /></div>
+        <div className='detailed-status__button'><IconButton disabled={reblog_disabled} animate  title={intl.formatMessage(messages.quote)} icon={quoteIcon} onClick={this.handleQuoteClick} /></div>
         {shareButton}
 
         <div className='detailed-status__action-bar-dropdown'>
