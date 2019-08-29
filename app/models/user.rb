@@ -212,10 +212,6 @@ class User < ApplicationRecord
   def shows_application?
     @shows_application ||= settings.show_application
   end
-
-  def allows_group_in_home_feed?
-    settings.group_in_home_feed
-  end
  
   def token_for_app(a)
     return nil if a.nil? || a.owner != self
@@ -272,10 +268,6 @@ class User < ApplicationRecord
 
   def hide_all_media?
     setting_display_media == 'hide_all'
-  end
-
-  def force_regeneration!
-    Redis.current.set("account:#{account_id}:regeneration", true)
   end
 
   protected
