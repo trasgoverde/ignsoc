@@ -27,11 +27,4 @@ module GroupInteractions
       query.pluck(:group_id, :unread_count).each_with_object({}) { |e, mapping| mapping[e[0]] = e[1] }
     end
   end
-
-  def accounts_for_local_distribution
-    accounts.local
-      .joins(:user)
-      .where('users.current_sign_in_at > ?', User::ACTIVE_DURATION.ago)
-  end
-
 end
