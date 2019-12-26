@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="60px" viewBox="0 0 59 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.326628571 0.133 7.18377143 0.133 7.18377143 6.1326 0.326628571 6.1326"></polygon>
+        <polygon id="path-3" points="0.653028571 0.8494 7.50971429 0.8494 7.50971429 6.8494 0.653028571 6.8494"></polygon>
+        <polygon id="path-5" points="0.653028571 0.283 7.50971429 0.283 7.50971429 6.283 0.653028571 6.283"></polygon>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="orca-facelift-europa" transform="translate(-691.000000, -2370.000000)">
+            <g id="Page-1" transform="translate(691.000000, 2370.000000)">
+                <path d="M3,44 L29,30" id="Stroke-1" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M55,44 L29,30" id="Stroke-3" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M29,58 L3,44" id="Stroke-5" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M55,44 L29,58" id="Stroke-7" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M3,17 L29,58" id="Stroke-9" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M55,17 L29,58" id="Stroke-11" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M29,3 L3,44" id="Stroke-13" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M55,44 L29,3" id="Stroke-15" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M3,17 L29,3" id="Stroke-17" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M55,17 L29,3" id="Stroke-19" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M3,17 L29,31" id="Stroke-21" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M55,17 L29,31" id="Stroke-23" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                <g id="Group-27" transform="translate(26.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-26"></g>
+                    <path d="M7.18377143,3.1326 C7.18377143,4.7896 5.64891429,6.1326 3.7552,6.1326 C1.86148571,6.1326 0.326628571,4.7896 0.326628571,3.1326 C0.326628571,1.4756 1.86148571,0.1326 3.7552,0.1326 C5.64891429,0.1326 7.18377143,1.4756 7.18377143,3.1326" id="Fill-25" fill="#495EF2" mask="url(#mask-2)"></path>
+                </g>
+                <path d="M32,30 C32,31.657 30.657,33 29,33 C27.343,33 26,31.657 26,30 C26,28.343 27.343,27 29,27 C30.657,27 32,28.343 32,30" id="Fill-28" fill="#495EF2"></path>
+                <path d="M32,57 C32,58.657 30.657,60 29,60 C27.343,60 26,58.657 26,57 C26,55.343 27.343,54 29,54 C30.657,54 32,55.343 32,57" id="Fill-30" fill="#495EF2"></path>
+                <path d="M6,17 C6,18.657 4.657,20 3,20 C1.343,20 0,18.657 0,17 C0,15.343 1.343,14 3,14 C4.657,14 6,15.343 6,17" id="Fill-32" fill="#F9057C"></path>
+                <path d="M6,44 C6,45.657 4.657,47 3,47 C1.343,47 0,45.657 0,44 C0,42.343 1.343,41 3,41 C4.657,41 6,42.343 6,44" id="Fill-34" fill="#F9057C"></path>
+                <g id="Group-38" transform="translate(51.000000, 13.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-37"></g>
+                    <path d="M7.51017143,3.8494 C7.51017143,5.5064 5.97531429,6.8494 4.0816,6.8494 C2.18788571,6.8494 0.653028571,5.5064 0.653028571,3.8494 C0.653028571,2.1924 2.18788571,0.8494 4.0816,0.8494 C5.97531429,0.8494 7.51017143,2.1924 7.51017143,3.8494" id="Fill-36" fill="#F9057C" mask="url(#mask-4)"></path>
+                </g>
+                <g id="Group-41" transform="translate(51.000000, 41.000000)">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <g id="Clip-40"></g>
+                    <path d="M7.51017143,3.283 C7.51017143,4.94 5.97531429,6.283 4.0816,6.283 C2.18788571,6.283 0.653028571,4.94 0.653028571,3.283 C0.653028571,1.626 2.18788571,0.283 4.0816,0.283 C5.97531429,0.283 7.51017143,1.626 7.51017143,3.283" id="Fill-39" fill="#F9057C" mask="url(#mask-6)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

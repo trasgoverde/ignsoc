@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="59px" viewBox="0 0 70 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.1991 0.3348 28.693 0.3348 28.693 14.9568 0.1991 14.9568"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="orca-facelift-europa" transform="translate(-203.000000, -1709.000000)">
+            <g id="best-of-crypto" transform="translate(203.000000, 1626.000000)">
+                <g id="Page-1" transform="translate(0.000000, 84.000000)">
+                    <path d="M55.1511,2.3435 L60.9951,2.3435 C63.9081,2.3435 66.2811,4.7055 66.2811,7.6185 L66.2811,21.0365" id="Stroke-1" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M11.5803,54.3635 L6.2753,54.3635 C3.3623,54.3635 0.9993,52.0015 0.9993,49.0775 L0.9993,7.6185 C0.9993,4.7055 3.3623,2.3435 6.2753,2.3435 L43.9483,2.3435" id="Stroke-3" stroke="#D3D7E1" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M66.2815,35.6589 L66.2815,49.0769 C66.2815,52.0019 63.9085,54.3639 60.9945,54.3639 L23.5775,54.3639" id="Stroke-5" stroke="#D3D7E1" stroke-width="2"></path>
+                    <g id="Group-9" transform="translate(41.000000, 20.707000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-8"></g>
+                        <path d="M28.6931,14.9568 L7.5101,14.9568 C3.4721,14.9568 0.1991,11.6838 0.1991,7.6458 C0.1991,3.6078 3.4721,0.3348 7.5101,0.3348 L28.6931,0.3348 L28.6931,14.9568 Z" id="Fill-7" fill="#495EF2" mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M51.7771,28.3528 C51.7771,29.8468 50.5661,31.0578 49.0721,31.0578 C47.5791,31.0578 46.3681,29.8468 46.3681,28.3528 C46.3681,26.8588 47.5791,25.6488 49.0721,25.6488 C50.5661,25.6488 51.7771,26.8588 51.7771,28.3528" id="Fill-10" fill="#F9057C"></path>
+                    <path d="M48.9163,2.3435 C48.9163,3.6375 47.8673,4.6865 46.5733,4.6865 C45.2783,4.6865 44.2293,3.6375 44.2293,2.3435 C44.2293,1.0495 45.2783,0.0005 46.5733,0.0005 C47.8673,0.0005 48.9163,1.0495 48.9163,2.3435 Z" id="Stroke-12" stroke="#D3D7E1" stroke-width="2"></path>
+                    <path d="M22.5056,54.3635 C22.5056,55.6575 21.4566,56.7065 20.1626,56.7065 C18.8676,56.7065 17.8186,55.6575 17.8186,54.3635 C17.8186,53.0695 18.8676,52.0205 20.1626,52.0205 C21.4566,52.0205 22.5056,53.0695 22.5056,54.3635 Z" id="Stroke-14" stroke="#D3D7E1" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

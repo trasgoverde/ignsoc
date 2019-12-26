@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="48px" viewBox="0 0 35 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,4.49861538 C0,6.984 2.016,9 4.50069231,9 C6.98538462,9 9,6.984 9,4.49861538 C9,2.01392308 6.98538462,0 4.50069231,0 C2.016,0 0,2.01392308 0,4.49861538 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="orca-facelift-dropdown" transform="translate(-620.000000, -162.000000)">
+            <g id="dropdown" transform="translate(581.000000, 109.000000)">
+                <g id="whitepaper" transform="translate(40.000000, 54.000000)">
+                    <g id="Page-1">
+                        <g id="Group-8">
+                            <g id="Group-3" transform="translate(19.000000, 32.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <polygon id="Fill-1" fill="#F9057C" mask="url(#mask-2)" points="-3.46153846 12.4615385 12.4615385 12.4615385 12.4615385 -3.46153846 -3.46153846 -3.46153846"></polygon>
+                            </g>
+                            <polygon id="Stroke-4" stroke="#D3D7E1" stroke-width="2" points="33 8.54285714 33 46 0 46 0 0 24.42 0"></polygon>
+                            <polyline id="Stroke-5" stroke="#D3D7E1" stroke-width="2" points="34 9 25 9 25 0"></polyline>
+                            <path d="M6,9.167 L17,9" id="Stroke-6" stroke="#D3D7E1" stroke-width="2"></path>
+                            <path d="M6,30.167 L11,30" id="Stroke-7" stroke="#D3D7E1" stroke-width="2"></path>
+                            <path d="M6,14.33 L28,14" id="Stroke-8" stroke="#D3D7E1" stroke-width="2"></path>
+                            <path d="M6,18.329 L28,18" id="Stroke-9" stroke="#D3D7E1" stroke-width="2"></path>
+                            <path d="M6,26.329 L22,26" id="Stroke-10" stroke="#D3D7E1" stroke-width="2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

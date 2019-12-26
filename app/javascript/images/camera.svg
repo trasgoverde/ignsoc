@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="28px" viewBox="0 0 46 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_camera</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 14 0 14 7 0 7"></polygon>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="orca-facelift-europa-afterico-48h" transform="translate(-101.000000, -5458.000000)">
+            <g id="cookies" transform="translate(93.000000, 5440.989556)">
+                <g id="icon_camera" transform="translate(8.000000, 19.000000)">
+                    <path d="M44.7567729,4.54261959 L44.7567729,20.367766 C44.7567729,21.5910787 43.4281219,22.3546751 42.3652011,21.7469147 L35.7532085,17.9445161 L35.7532085,19.0275764 C35.7532085,22.2845489 33.1037222,24.9259692 29.8368038,24.9259692 C28.0374662,24.9259692 26.6879629,24.9259692 25.7882941,24.9259692 C22.8374802,24.9259692 18.4112595,24.9259692 12.5096318,24.9259692 C9.24271349,24.9259692 6.5932271,22.2845489 6.5932271,19.0275764 L6.5932271,5.89839285 C6.5932271,2.64142031 9.24271349,0 12.5096318,0 L29.8446194,0 C33.1115377,0 35.7610241,2.64142031 35.7610241,5.89839285 L35.7610241,6.98145309 L42.3730167,3.17905453 C43.4281219,2.55571051 44.7567729,3.32709874 44.7567729,4.54261959 Z" id="Combined-Shape" stroke="#D3D7E1" stroke-width="2" stroke-linejoin="round"></path>
+                    <g id="Group-9" transform="translate(0.000000, 3.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-8"></g>
+                        <path d="M14,7 L3.59212466,7 C1.60812803,7 0,5.43311449 0,3.5 C0,1.56688551 1.60812803,0 3.59212466,0 L14,0 L14,7 Z" id="Fill-7" fill="#495EF2" mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M31.409,7.704 C31.409,9.198 30.198,10.409 28.704,10.409 C27.211,10.409 26,9.198 26,7.704 C26,6.21 27.211,5 28.704,5 C30.198,5 31.409,6.21 31.409,7.704" id="Fill-10" fill="#F9057C"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
