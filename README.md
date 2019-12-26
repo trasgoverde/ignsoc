@@ -1,8 +1,8 @@
-# Gab Social
+# Ignius Social
 
-Gab Social is an open source and fully decentralized social network powered by the Gab Platform. It is the new social network of Gab.com. This change was made to further Gab's committment to it's users trust and privacy online. And, by offering decentralization and federation, Gab further demonstrates a lack of interest in the ownership of your data.
+Ignius Social is an open source and fully decentralized social network powered by the Ignius Platform. It is the new social network of Ignius.com. This change was made to further Ignius's committment to it's users trust and privacy online. And, by offering decentralization and federation, Ignius further demonstrates a lack of interest in the ownership of your data.
 
-The Gab Social project is based on the [Mastodon](https://github.com/tootsuite/mastodon) project, and is licensed under the terms and conditions of AGPL-3.0. While we will be keeping this license, over time we will be keeping less and less of the original project's source code and approach.
+The Ignius Social project is based on the [Mastodon](https://github.com/tootsuite/mastodon) project, and is licensed under the terms and conditions of AGPL-3.0. While we will be keeping this license, over time we will be keeping less and less of the original project's source code and approach.
 
 Our goal is to establish the foundation of a federated network of social networks. Our first step is our move to this technology, which immediately enables the construction of that network and provides the tools people will need to create and build. Over time, a new implementation of this system will emerge that is entirely based on Node.js, moves away from Postgres as it's database, and becomes part of the HYDRA family.
 
@@ -10,11 +10,11 @@ Our goal is to establish the foundation of a federated network of social network
 
 We have diverged from Mastodon in several ways in pursuit of our own goals.
 
-1. Node.js has been updated to 10.15.3LTS for hosting the Streaming API in compliance with the Gab Platform.
-1. Statuses were renamed from 'toots' to 'gabs'
+1. Node.js has been updated to 10.15.3LTS for hosting the Streaming API in compliance with the Ignius Platform.
+1. Statuses were renamed from 'toots' to 'Igniuss'
 1. The maximum length of a status was increased to 3,000 characters
-1. The browser client user experience has been significantly altered to match what users of Gab will expect
-1. Features were added to integrate the system with the Gab platform (accessing trends from Dissenter, for example)
+1. The browser client user experience has been significantly altered to match what users of Ignius will expect
+1. Features were added to integrate the system with the Ignius platform (accessing trends from Dissenter, for example)
 1. Groups and group moderation
 1. Quote posting
 
@@ -46,21 +46,21 @@ A **stand-alone** installation guide will be provided as soon as possible.
 
 ## Local development
 
-To get started developing on Gab, you will need to run a version of it locally.
+To get started developing on Ignius, you will need to run a version of it locally.
 The following instructions assume you are already familiar with using a terminal program.
 
 1. Install [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) if you haven't already.
-2. Clone this repository with `git clone https://code.gab.com/gab/social/gab-social.git`
-3. Change into the project directory with `cd gab-social`
+2. Clone this repository with `git clone https://code.Ignius.com/Ignius/social/Ignius-social.git`
+3. Change into the project directory with `cd Ignius-social`
 4. Run `vagrant up` to provision the virtual machine. This will take a while.
 5. Finally, run `vagrant ssh -c "cd /vagrant && foreman start"` to start the local web server.
-6. Visit http://0.0.0.0:3000 in your web browser to see Gab's splash screen. If it doesn't load, or styling is missing, wait another minute and refresh the page.
+6. Visit http://0.0.0.0:3000 in your web browser to see Ignius's splash screen. If it doesn't load, or styling is missing, wait another minute and refresh the page.
 7. Log in with the username `admin` and password `administrator`
-8. Have fun developing on Gab!
+8. Have fun developing on Ignius!
 
 ## License
 
-Copyright (C) 2019 Gab AI, Inc., and other contributors (see [AUTHORS.md](AUTHORS.md), forked)
+Copyright (C) 2019 Ignius S.L.U., Inc., and other contributors (see [AUTHORS.md](AUTHORS.md), forked)
 
 Copyright (C) 2016-2019 Eugen Rochko & other Gab Social contributors
 

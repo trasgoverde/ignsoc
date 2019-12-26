@@ -2,13 +2,13 @@
 # important settings can be changed from the admin interface.
 
 defaults: &defaults
-  site_title: Gab Social
-  site_short_description: ''
-  site_description: ''
-  site_extended_description: ''
+  site_title: Ignius Social
+  site_short_description: 'Free Speech Social Media'
+  site_description: 'Ignius, The Free Speech Social Media '
+  site_extended_description: 'We believe in Free Speech and the different tools we have, as Open Source Software and Open Societies'
   site_terms: ''
   site_contact_username: ''
-  site_contact_email: ''
+  site_contact_email: 'hello@be-to-you.com'
   registrations_mode: 'open'
   profile_directory: true
   closed_registrations_message: ''

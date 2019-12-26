@@ -1,7 +1,7 @@
 {
-  "name": "Gab Social",
+  "name": "Ignius Social",
   "description": "A social network that champions free speech, individual liberty and the free flow of information online.",
-  "repository": "https://code.gab.com/gab/social/gab-social",
+  "repository": "https://github.com/trasgoverde/ignsoc",
   "logo": "https://code.gab.com/gab/social/gab-social/blob/master/public/android-chrome-192x192.png",
   "env": {
     "HEROKU": {
@@ -10,7 +10,7 @@
       "required": true
     },
     "LOCAL_DOMAIN": {
-      "description": "The domain that your Gab Social instance will run on (this can be appname.herokuapp.com or a custom domain)",
+      "description": "The domain that your Ignius Social instance will run on (this can be appname.herokuapp.com or a custom domain)",
       "required": true
     },
     "LOCAL_HTTPS": {
@@ -36,7 +36,7 @@
       "required": true
     },
     "S3_ENABLED": {
-      "description": "Should Gab Social use Amazon S3 for storage? This is highly recommended, as Heroku does not have persistent file storage (files will be lost).",
+      "description": "Should Ignius Social use Amazon S3 for storage? This is highly recommended, as Heroku does not have persistent file storage (files will be lost).",
       "value": "true",
       "required": false
     },

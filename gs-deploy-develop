@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Update code and update public/src/gab-social.zip
+# Update code and update public/src/ignius-social.zip
 git pull origin develop
 ./gs-export
 

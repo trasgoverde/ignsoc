@@ -1,5 +1,5 @@
-// Gab Social Stream API
-// Copyright (C) 2019 Gab AI, Inc.
+// Ignius Social Stream API
+// Copyright (C) 2019 Dipassio, S.L.U.
 // License: AGPL-3.0
 
 'use strict';
