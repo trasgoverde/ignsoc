@@ -58,3 +58,31 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+
+## Local development
+
+To get started developing on Ignius, you will need to run a version of it locally.
+The following instructions assume you are already familiar with using a terminal program.
+
+1. Install [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) if you haven't already.
+2. Clone this repository with `git clone https://code.Ignius.com/Ignius/social/Ignius-social.git`
+3. Change into the project directory with `cd Ignius-social`
+4. Run `vagrant up` to provision the virtual machine. This will take a while.
+5. Finally, run `vagrant ssh -c "cd /vagrant && foreman start"` to start the local web server.
+6. Visit http://0.0.0.0:3000 in your web browser to see Ignius's splash screen. If it doesn't load, or styling is missing, wait another minute and refresh the page.
+7. Log in with the username `admin` and password `administrator`
+8. Have fun developing on Ignius!
+
+## License
+
+Copyright (C) 2019 Ignius S.L.U., Inc., and other contributors (see [AUTHORS.md](AUTHORS.md), forked)
+
+Copyright (C) 2016-2019 Eugen Rochko & other Gab Social contributors
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
